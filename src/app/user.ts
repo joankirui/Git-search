@@ -1,4 +1,4 @@
 export class User {
-    constructor(){}
+    constructor(public bio:string, public following_url:string,public followers_url:string,public name:string){}
 }
 
