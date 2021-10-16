@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { User } from '../user';
 
 @Component({
   selector: 'app-gitsearch',
@@ -9,15 +7,10 @@ import { User } from '../user';
 })
 export class GitsearchComponent implements OnInit {
 
-  user!: User[];
 
-  constructor(private http:HttpClient) { }
+  constructor() { }
 
   ngOnInit(){
-    interface ApiResponse{
-      name:string;
-      bio:string;
-    }
   }
 
 }
