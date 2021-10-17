@@ -8,15 +8,18 @@ import { HttpserviceService } from '../services/httpservice/httpservice.service'
 })
 export class GitsearchComponent implements OnInit {
 
+  name = "";
+
 
   constructor(private httpservice: HttpserviceService) { }
 
   ngOnInit(){
     this.getUsers('joankirui')
+    
   }
 
-  getUsers(userName: string) {
-    this.httpservice.getUser(userName).then((response) => {
+  getUsers(name:string) {
+    this.httpservice.getUser(name).then((response) => {
       console.log(response);
     });
   }

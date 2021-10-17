@@ -1,1 +1,11 @@
+<!-- <app-gitsearch-form></app-gitsearch-form> -->
+<div class="container">
+    <form class="form-inline">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Github username" [(ngModel)]="name" name="name">
+        <button type="submit" class="btn btn-primary" (click)="getUsers(name)"><i class="fa fa-search" aria-hidden="true"></i>Search</button>
+    </div>
+</form>
+
+</div>
 
