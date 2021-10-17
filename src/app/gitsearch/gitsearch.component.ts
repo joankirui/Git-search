@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpServiceService } from '../http-service.service';
+import { HttpserviceService } from '../services/httpservice/httpservice.service';
 
 @Component({
   selector: 'app-gitsearch',
@@ -9,9 +9,15 @@ import { HttpServiceService } from '../http-service.service';
 export class GitsearchComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(private httpservice: HttpserviceService) { }
 
   ngOnInit(){
+    this.getUsers('joankirui')
   }
 
+  getUsers(userName: string) {
+    this.httpservice.getUser(userName).then((response) => {
+      console.log(response);
+    });
+  }
 }
