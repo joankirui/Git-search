@@ -64,7 +64,7 @@ export class HttpserviceService {
 
     return new Promise((resolve, reject) => {
       this.http
-        .get<Repository>(this.url + `/users/u/${userName}`, httpOptions)
+        .get<Repository>(this.url + `/users/${userName}/repos`, httpOptions)
         .toPromise()
         .then(
           (result) => {

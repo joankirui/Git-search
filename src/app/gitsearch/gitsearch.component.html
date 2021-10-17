@@ -5,12 +5,8 @@
         <input type="text" class="form-control" placeholder="Github username" [(ngModel)]="name" name="name">
         <button type="submit" class="btn btn-primary" (click)="getUsers(name)"><i class="fa fa-search" aria-hidden="true"></i>usernamesearch</button>
     </div>
-    <form class="form-inline">
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="repository" [(ngModel)]="name" name="name">
-            <button type="submit" class="btn btn-primary" (click)="getRepo(name)"><i class="fa fa-search" aria-hidden="true"></i>reposearch</button>
-        </div>
 </form>
+<input type="text" class="form-control" name="" placeholder="Search through repos" id="repoSearch"><br>
 
 </div>
 
