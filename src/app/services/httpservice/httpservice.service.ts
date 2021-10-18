@@ -14,7 +14,7 @@ export class HttpserviceService {
   repo!: Repo;
 
   constructor(private http: HttpClient) { 
-    this.user = new User("","","","","");
+    this.user = new User("", 0,0,"","","");
     this.repo = new Repo("","","");
   }
 
@@ -23,9 +23,10 @@ export class HttpserviceService {
     interface Response {
       name: string;
       bio:string;
-      followers_url:string;
-      following_url:string;
+      followers:number;
+      following:number;
       avatar_url:string;
+      login:string;
     }
   
     const httpOptions = {
@@ -40,7 +41,8 @@ export class HttpserviceService {
         .toPromise()
         .then(
           (result) => {
-            resolve(result);
+            this.user = result;
+             resolve(result);
           },
           (error) => {
             console.log(error);
@@ -68,6 +70,7 @@ export class HttpserviceService {
         .toPromise()
         .then(
           (result) => {
+            this.repo = result;
             resolve(result);
           },
           (error) => {

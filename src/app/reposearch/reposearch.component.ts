@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpserviceService } from '../services/httpservice/httpservice.service';
+import { User } from 'src/app/user';
+import { Repo } from 'src/app/repo';
 
 @Component({
   selector: 'app-reposearch',

@@ -2,11 +2,41 @@
 <div class="container">
     <form class="form-inline">
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="Github username" [(ngModel)]="name" name="name">
-        <button type="submit" class="btn btn-primary" (click)="getUsers(name)"><i class="fa fa-search" aria-hidden="true"></i>usernamesearch</button>
+        <br><input type="text" class="form-control" placeholder="Github username" [(ngModel)]="name" name="name"><br>
+        <button type="submit" class="btn btn-primary" (click)="getUsers(name)">Search</button><br>
     </div>
-</form>
-<input type="text" class="form-control" name="" placeholder="Search through repos" id="repoSearch"><br>
+    </form>
+    
+    <div class = "row">
+        <div class="col-md-3"></div>
+        <div class="col-md-3">
+            <h4>Username: {{user.login}}</h4>
+            
+            <button class="btn btn-primary">Following: {{user.following}}</button><br>
+            <br><button class="btn btn-primary">Followers: {{user.followers}}</button>
+    
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <br><div class="card-columns container-fluid" style="width: 40rem;">
+        <div *ngFor='let file of repository' class="card">
+            <h4 class ="card-header">{{file.name}}</h4>
+            <p class="card-body">Description: {{file.description}}<br>Language: {{file.language}}</p>
+        </div>
+    </div>
 
-</div>
+    <!-- <div class="card-columns container-fluid">
+        <div *ngFor='let use of user' id="user" class="card">
+            <h4 class="card-header">{{use.name}}</h4>
+            <p class="card-body">Description: {{use.description}}<br>Language: {{use.language}}</p>
+        </div>
+    </div>
+    <br><input type="text" class="form-control" name="" placeholder="Search through repos" id="repoSearch"><br>
+    <button type="submit" class="btn btn-primary" (click)="getRepos(repo)"><i class="fa fa-search" aria-hidden="true"></i>Search</button> -->
+
+
+
+
+
+
 
