@@ -1,0 +1,8 @@
+#name ,#button{
+    margin-left: 25px;
+    width: fit-content;
+}
+#card{
+    display: flexbox;
+    justify-content: center;
+}
